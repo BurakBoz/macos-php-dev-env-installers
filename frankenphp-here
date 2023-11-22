@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+echo "Running frankenphp via docker.."
+(docker run -v $PWD:/app/public -e SERVER_NAME=localhost -p 80:80 -p 443:443 dunglas/frankenphp) || echo "Failed to run frankenphp docker image!"
